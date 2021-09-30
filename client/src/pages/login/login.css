@@ -5,10 +5,10 @@
   align-items: center;
   justify-content: center;
   background-image: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7)
     ),
-    url("https://wallpaperaccess.com/full/1524973.jpg");
+    url("../../images/SWSequelTrilogy.jpg");
   background-size: cover;
 }
 
@@ -34,7 +34,7 @@
 .loginBtn {
   margin-top: 20px;
   cursor: pointer;
-  background-color: lightcoral;
+  background-color: #22ba1a;
   border: none;
   color: white;
   padding: 10px;
@@ -44,7 +44,7 @@
   position: absolute;
   top: 60px;
   right: 20px;
-  background-color: teal;
+  background-color: #2e67f8;
   cursor: pointer;
   border: none;
   padding: 10px;

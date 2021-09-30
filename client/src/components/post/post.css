@@ -1,6 +1,12 @@
 .post {
   width: 300px;
   margin: 0 25px 40px 25px;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7)
+    ),
+    url("../../images/SWDeathStar.jpeg");
+  background-size: cover;
 }
 
 .postImage {
@@ -17,9 +23,9 @@
 }
 
 .postCategory {
-  font-family: "Varela Round", sans-serif;
+  font-family: "Episode 1", sans-serif;
   font-size: 11px;
-  color: #be9656;
+  color: #2e67f8;
   line-height: 20px;
   margin-top: 15px;
   margin-right: 10px;
@@ -27,25 +33,24 @@
 }
 
 .postTitle {
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 24px;
+  font-family: "RedFive", sans-serif;
+  font-size: 18px;
   font-weight: 700;
   margin-top: 15px;
+  align-items: center;
   cursor: pointer;
 }
 
 .postDate {
-  font-family: "Lora", serif;
-  font-style: italic;
+  font-family: "Episode 1", serif;
   font-size: 13px;
-  color: #999;
+  color: #eb212e;
   margin-top: 15px;
 }
 
 .postDescription {
-  font-family: "Varela Round", sans-serif;
+  font-family: "Episode 1", sans-serif;
   font-size: 14px;
-  color: #444;
   line-height: 24px;
   margin-top: 15px;
   overflow: hidden;

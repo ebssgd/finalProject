@@ -8,7 +8,7 @@ import Settings from "./pages/settings/Settings";
 import SinglePost from "./pages/singlePost/SinglePost";
 
 function App() {
-  const user = false;
+  const user = true;
   return (
     <Router>
       <NavBar />

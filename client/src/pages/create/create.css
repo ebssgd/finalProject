@@ -1,5 +1,11 @@
 .create {
   padding-top: 50px;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("../../images/SWMoviePoster.jpg");
+  background-size: cover;
 }
 
 .createImage {
@@ -26,7 +32,7 @@
   font-size: 20px;
   border-radius: 50%;
   border: 1px solid;
-  color: rgb(129, 125, 125);
+  color: #eb212e;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,7 +41,6 @@
 
 .createInput {
   font-size: 30px;
-  border: none;
   padding: 20px;
   width: 70vw;
 }
@@ -61,7 +66,7 @@
   top: 20px;
   right: 50px;
   color: white;
-  background-color: teal;
+  background-color: #22ba1a;
   padding: 10px;
   border: none;
   border-radius: 10px;

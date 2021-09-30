@@ -1,5 +1,11 @@
 .onePost {
   flex: 9;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7)
+    ),
+    url("../../images/SWDeathStar.jpeg");
+  background-size: cover;
 }
 
 .onePostWrapper {
@@ -32,11 +38,11 @@
 }
 
 .onePostIcon:first-child {
-  color: teal;
+  color: #22ba1a;
 }
 
 .onePostIcon:last-child {
-  color: tomato;
+  color: #eb212e;
 }
 
 .onePostInfo {
@@ -45,11 +51,11 @@
   justify-content: space-between;
   font-size: 16px;
   font-family: "Varela Round" sans-serif;
-  color: #b39656;
+  color: #2e67f8;
 }
 
 .onePostDescription {
-  color: #678;
+  color: black;
   font-size: 18px;
   line-height: 25px;
 }

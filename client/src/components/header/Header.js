@@ -1,16 +1,19 @@
 import "./header.css";
+import allMovies from "../../images/SWAllMovies.jpeg";
 
 function Header() {
   return (
     <div className="header">
       <div className="headerTitles">
-        <span className="headerTitleSm">React & Node</span>
-        <span className="headerTitleLg">Blog</span>
+        <span className="headerTitleSm">Star Wars</span>
+        <span className="headerTitleLg">A New Blog</span>
       </div>
       <img
         className="headerImage"
-        src="https://www.colesclassroom.com/wp-content/uploads/2018/12/pexels-photo-443446.jpeg"
-        alt="Pretty Lake"
+        src={allMovies}
+        alt="All Movies"
+        height="200px"
+        width="400px"
       />
     </div>
   );

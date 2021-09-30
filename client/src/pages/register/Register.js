@@ -24,7 +24,7 @@ function Register() {
           type="password"
           placeholder="Create your password..."
         />
-        <button className="registerBtn">Login</button>
+        <button className="registerBtn">Register</button>
         <button className="registerLoginBtn">
           <Link className="link" to="/login">
             Login

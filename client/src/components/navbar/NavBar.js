@@ -1,16 +1,42 @@
 import "./navbar.css";
 import { Link } from "react-router-dom";
+import yoda from "../../images/SWYodaWithLightsabre.jpg";
 
 function NavBar() {
-  const user = false;
+  const user = true;
   return (
     <div className="nav">
       <div className="topLeft">
-        <i className="topIcon fab fa-facebook"></i>
-        <i className="topIcon fab fa-twitter-square"></i>
-        <i className="topIcon fab fa-pinterest"></i>
-        <i className="topIcon fab fa-instagram-square"></i>
-        <i className="topIcon fab fa-reddit"></i>
+        <i className="topIcon green fab fa-jedi-order">
+          <a
+            className="link leftLink"
+            href="https://starwars.fandom.com/wiki/Main_Page"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Wookiepedia
+          </a>
+        </i>
+        <i className="topIcon red fab fa-galactic-senate">
+          <a
+            className="link leftLink"
+            href="http://www.rebelscum.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            RebelScum
+          </a>
+        </i>
+        <i className="topIcon blue fab fa-old-republic">
+          <a
+            className="link leftLink"
+            href="https://www.starwarsnewsnet.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            SWNewsNet
+          </a>
+        </i>
       </div>
       <div className="topCenter">
         <ul className="topList">
@@ -19,7 +45,7 @@ function NavBar() {
               Home
             </Link>
           </li>
-          <li className="topListItem">
+          {/* <li className="topListItem">
             <Link className="link" to="/">
               About Us
             </Link>
@@ -28,10 +54,10 @@ function NavBar() {
             <Link className="link" to="/">
               Contact
             </Link>
-          </li>
+          </li> */}
           <li className="topListItem">
             <Link className="link" to="/create">
-              New Blog
+              Create Blog
             </Link>
           </li>
           <li className="topListItem">{user && "Logout"}</li>
@@ -39,11 +65,7 @@ function NavBar() {
       </div>
       <div className="topRight">
         {user ? (
-          <img
-            className="topImage"
-            src="https://i.redd.it/v0caqchbtn741.jpg"
-            alt="Profile Pic"
-          ></img>
+          <img className="topImage" src={yoda} alt="Profile Pic"></img>
         ) : (
           <ul className="topList">
             <li className="topListItem">
