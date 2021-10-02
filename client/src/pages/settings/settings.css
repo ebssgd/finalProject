@@ -1,5 +1,11 @@
 .settings {
   display: flex;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7)
+    ),
+    url("../../images/SWBobaFett.jpg");
+  background-size: cover;
 }
 
 .settingsWrapper {
@@ -16,11 +22,11 @@
 .settingsUpdateTitle {
   font-size: 30px;
   margin-bottom: 20px;
-  color: lightcoral;
+  color: #22ba1a;
 }
 
 .settingsDeleteTitle {
-  color: red;
+  color: #eb212e;
   font-size: 12px;
   cursor: pointer;
 }
@@ -37,8 +43,8 @@
 }
 
 .settingsProfilePic > img {
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   border-radius: 20px;
   object-fit: cover;
 }
@@ -47,7 +53,7 @@
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background-color: lightcoral;
+  background-color: #2e67f8;
   color: white;
   display: flex;
   align-items: center;
@@ -73,7 +79,7 @@
   border: none;
   border-radius: 10px;
   color: white;
-  background-color: teal;
+  background-color: #22ba1a;
   padding: 10px;
   margin-top: 20px;
   cursor: pointer;

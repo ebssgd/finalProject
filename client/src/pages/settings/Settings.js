@@ -1,5 +1,6 @@
 import Sidebar from "../../components/sidebar/Sidebar";
 import "./settings.css";
+import pic from "../../images/SWBobaFett.jpg";
 
 function Settings() {
   return (
@@ -12,10 +13,7 @@ function Settings() {
         <form className="settingsForm">
           <label>Profile Picture</label>
           <div className="settingsProfilePic">
-            <img
-              src="https://i.redd.it/v0caqchbtn741.jpg"
-              alt="Mike is everyone"
-            />
+            <img src={pic} alt="Mike is everyone" />
             <label htmlFor="fileInput">
               <i className="settingsPicIcon fas fa-user-ninja"></i>
             </label>
