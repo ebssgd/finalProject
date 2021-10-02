@@ -26,18 +26,20 @@ router.post("/login", async (req, res) => {
   try {
     const user = await User.findOne({ username: req.body.username });
     if (!user) {
-      res.status(400).json("Invalid input");
+      return res.status(400).json("Invalid input");
     }
 
-    const validate = await bcrypt.compare(req.body.pass, user.password);
-    if (!validate) {
-      res.status(400).json("Invalid input");
+    const valid = await bcrypt.compare(req.body.password, user.password);
+    if (!valid) {
+      return res.status(400).json("Invalid input");
     }
 
-    const { password, ...sith } = user._doc;
-    res.status(200).json(sith);
+    if (user && valid) {
+      const { password, ...sith } = user._doc;
+      return res.status(200).json(sith);
+    }
   } catch (err) {
-    res.status(500).json(err);
+    return res.status(500).json(err);
   }
 });
 
