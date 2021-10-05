@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import yoda from "../../images/SWYodaWithLightsabre.jpg";
 
 function NavBar() {
-  const user = true;
+  const user = false;
   return (
     <div className="nav">
       <div className="topLeft">
@@ -47,7 +47,7 @@ function NavBar() {
           </li>
           {/* <li className="topListItem">
             <Link className="link" to="/">
-              About Us
+              About Us 
             </Link>
           </li>
           <li className="topListItem">
