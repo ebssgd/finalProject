@@ -61,7 +61,11 @@ function Register() {
           Login
         </Link>
       </button>
-      {error && <span className="red">That's no moon.</span>}
+      {error && (
+        <span style={{ marginTop: "10px" }} className="red">
+          Something went wrong.
+        </span>
+      )}
     </div>
   );
 }

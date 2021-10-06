@@ -1,15 +1,15 @@
 import "./post.css";
 import { Link } from "react-router-dom";
-import luke from "../../images/SWLuke.jpeg";
 
 function Post({ post }) {
+  const PF = "http://localhost:5000/images/";
   return (
     <div className="post">
-      {post.photo && <img className="postImage" src={luke} alt="Skywalker" />}
+      {post.photo && <img className="postImage" src={PF + post.photo} alt="" />}
       <div className="postInfo">
         <div className="postCategories">
           {post.categories.map((cat) => {
-            <span className="postCategory">{cat.name}</span>;
+            return <span className="postCategory">{cat.name}</span>;
           })}
         </div>
         <Link to={`/post/${post._id}`} className="link">

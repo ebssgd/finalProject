@@ -6,13 +6,15 @@ import Login from "./pages/login/Login";
 import Create from "./pages/create/Create";
 import Settings from "./pages/settings/Settings";
 import SinglePost from "./pages/singlePost/SinglePost";
+import { useContext } from "react";
+import { Context } from "./context/Context";
 
 function App() {
-  const user = false;
+  const { user } = useContext(Context);
   return (
     <Router>
       <NavBar />
-      <Switch>
+      <Switch>78
         <Route exact path="/">
           <Home />
         </Route>

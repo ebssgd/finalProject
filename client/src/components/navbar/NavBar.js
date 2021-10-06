@@ -1,9 +1,14 @@
 import "./navbar.css";
 import { Link } from "react-router-dom";
-import yoda from "../../images/SWYodaWithLightsabre.jpg";
+import { useContext } from "react";
+import { Context } from "../../context/Context";
 
 function NavBar() {
-  const user = false;
+  const { user, dispatch } = useContext(Context);
+
+  const handleLogout = () => {
+    dispatch({ type: "LOGOUT" });
+  };
   return (
     <div className="nav">
       <div className="topLeft">
@@ -60,12 +65,14 @@ function NavBar() {
               Create Blog
             </Link>
           </li>
-          <li className="topListItem">{user && "Logout"}</li>
+          <li className="topListItem" onClick={handleLogout}>
+            {user && "Logout"}
+          </li>
         </ul>
       </div>
       <div className="topRight">
         {user ? (
-          <img className="topImage" src={yoda} alt="Profile Pic"></img>
+          <img className="topImage" src={user.profilePic} alt=""></img>
         ) : (
           <ul className="topList">
             <li className="topListItem">
