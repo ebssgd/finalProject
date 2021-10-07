@@ -11,6 +11,8 @@
 .onePostWrapper {
   padding: 20px;
   padding-right: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .onePostImage {
@@ -25,6 +27,17 @@
   margin: 10px;
   font-family: "Lora", serif;
   font-size: 28px;
+}
+
+.onePostTitleUpdate {
+  margin: 10px;
+  font-family: "Lora", serif;
+  font-size: 28px;
+  text-align: center;
+}
+
+.onePostTitleUpdate:focus {
+  outline: none;
 }
 
 .onePostEdit {
@@ -64,4 +77,26 @@
   margin-left: 20px;
   font-size: 30px;
   font-weight: 600;
+}
+
+.onePostDescriptionUpdate {
+  color: black;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.onePostDescriptionUpdate:focus {
+  outline: none;
+}
+
+.editPostBtn {
+  width: 100px;
+  border: none;
+  background-color: #22ba1a;
+  padding: 5px;
+  color: white;
+  border-radius: 5px;
+  margin-top: 15px;
+  cursor: pointer;
+  align-self: flex-end;
 }

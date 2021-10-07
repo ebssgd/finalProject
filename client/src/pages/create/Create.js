@@ -5,7 +5,7 @@ import { Context } from "../../context/Context";
 
 function Create() {
   const [title, setTitle] = useState("");
-  const [desc, setDesc] = useState("");
+  const [description, setDescription] = useState("");
   const [file, setFile] = useState(null);
   const { user } = useContext(Context);
 
@@ -14,7 +14,7 @@ function Create() {
     const newPost = {
       username: user.username,
       title,
-      desc,
+      description,
     };
 
     if (file) {
@@ -26,15 +26,15 @@ function Create() {
       try {
         await axios.post("/upload", data);
       } catch (err) {
-        console.log("Error", err);
+        console.log(err);
       }
     }
     try {
       const res = await axios.post("/posts", newPost);
       console.log(res.data);
-      //window.location.replace("/post/" + res.data.id);
+      window.location.replace("/post/" + res.data._id);
     } catch (err) {
-      console.log("Error", err);
+      console.log(err.response.data);
     }
   };
 
@@ -67,7 +67,7 @@ function Create() {
             placeholder="What's on your mind..."
             type="text"
             className="createInput createText"
-            onChange={(e) => setDesc(e.target.value)}
+            onChange={(e) => setDescription(e.target.value)}
           ></textarea>
         </div>
         <button className="createSubmit" type="submit">

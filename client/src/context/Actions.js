@@ -14,3 +14,16 @@ export const BadLogin = () => ({
 export const Logout = () => ({
   type: "LOGOUT",
 });
+
+export const UpdateStart = (userAuth) => ({
+  type: "UPDATE_START",
+});
+
+export const UpdateSuccessful = (user) => ({
+  type: "UPDATE_SUCCESS",
+  payload: user,
+});
+
+export const BadUpdate = () => ({
+  type: "BAD_UPDATE",
+});

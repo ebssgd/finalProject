@@ -72,7 +72,9 @@ function NavBar() {
       </div>
       <div className="topRight">
         {user ? (
-          <img className="topImage" src={user.profilePic} alt=""></img>
+          <Link to="/settings">
+            <img className="topImage" src={user.profilePic} alt=""></img>
+          </Link>
         ) : (
           <ul className="topList">
             <li className="topListItem">

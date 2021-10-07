@@ -5,7 +5,9 @@ function Post({ post }) {
   const PF = "http://localhost:5000/images/";
   return (
     <div className="post">
-      {post.photo && <img className="postImage" src={PF + post.photo} alt="" />}
+      {post.postPhoto && (
+        <img className="postImage" src={PF + post.postPhoto} alt="" />
+      )}
       <div className="postInfo">
         <div className="postCategories">
           {post.categories.map((cat) => {

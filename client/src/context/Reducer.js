@@ -18,6 +18,23 @@ const LoginReducer = (state, action) => {
         isFetching: false,
         error: true,
       };
+    case "UPDATE_START":
+      return {
+        ...state,
+        isFetching: true,
+      };
+    case "UPDATE_SUCCESS":
+      return {
+        user: action.payload,
+        isFetching: false,
+        error: false,
+      };
+    case "BAD_UPDATE":
+      return {
+        user: state.user,
+        isFetching: false,
+        error: true,
+      };
     case "LOGOUT":
       return {
         user: null,

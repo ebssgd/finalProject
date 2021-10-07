@@ -84,3 +84,9 @@
   margin-top: 20px;
   cursor: pointer;
 }
+
+.successUpdate {
+  color: #22ba1a;
+  text-align: center;
+  margin-top: 15px;
+}
