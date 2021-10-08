@@ -1,41 +1,20 @@
 import "./sidebar.css";
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import axios from "axios";
 import yoda from "../../images/SWYodaWithLightsabre.jpg";
 
 function Sidebar() {
-  const [cats, setCats] = useState([]);
-
-  useEffect(() => {
-    const getCats = async () => {
-      const response = await axios.get("/categories");
-      setCats(response.data);
-    };
-    getCats();
-  }, []);
   return (
     <div className="sidebar">
       <div className="sidebarItem">
         <span className="sidebarTitle">About Us</span>
         <img src={yoda} alt="Yoda" width="220px" height="100px" />
         <p>
-          Lucas ipsum dolor sit amet mimbanite saurin elrood dagobah darth even
-          mon cal ree-yees quermian.
+          We are Star Wars fans. Obviously. We want to share our fandom with
+          anyone who would like to learn more about and of the movie series’ or
+          any other media type that Star Wars exists in, which is pretty much
+          all of them. We hope you will join us!
         </p>
       </div>
-      <div className="sidebarItem">
-        <span className="sidebarTitle">Categories</span>
-        <ul className="sidebarList">
-          {cats.map((category) => {
-            return (
-              <Link to={`/?cats=${category.name}`} className="link">
-                <li className="sidebarListItem">{category.name}</li>
-              </Link>
-            );
-          })}
-        </ul>
-      </div>
+
       <div className="sidebarItem">
         <span className="sidebarTitle">Other great sites: </span>
         <div className="sidebarLinks">

@@ -67,7 +67,7 @@ function OnePost() {
         ) : (
           <h1 className="onePostTitle">
             {title}
-            {post.username === user.username && (
+            {post.username === user?.username && (
               <div className="onePostEdit">
                 <i
                   className="onePostIcon fas fa-undo"

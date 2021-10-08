@@ -50,7 +50,6 @@ function Settings() {
       <div className="settingsWrapper">
         <div className="settingsTitle">
           <span className="settingsUpdateTitle">Update your account</span>
-          <span className="settingsDeleteTitle">Delete your account</span>
         </div>
         <form className="settingsForm" onSubmit={handleUpdateUser}>
           <label>Profile Picture</label>
@@ -72,19 +71,32 @@ function Settings() {
           <label className="settingsFormLabel">Username</label>
           <input
             type="text"
-            placeholder={user.username}
-            onChange={(e) => setUsername(e.target.value)}
+            placeholder="New Username"
+            onChange={(e) => {
+              if (e.target.value) {
+                setUsername(e.target.value);
+              }
+            }}
           />
           <label className="settingsFormLabel">Email</label>
           <input
             type="email"
-            placeholder={user.email}
-            onChange={(e) => setEmail(e.target.value)}
+            placeholder="New Email"
+            onChange={(e) => {
+              if (e.target.value) {
+                setEmail(e.target.value);
+              }
+            }}
           />
           <label className="settingsFormLabel">Password</label>
           <input
             type="password"
-            onChange={(e) => setPassword(e.target.value)}
+            placeholder="New Password"
+            onChange={(e) => {
+              if (e.target.value) {
+                setPassword(e.target.value);
+              }
+            }}
           />
           <button className="settingsSubmit" type="submit">
             Update

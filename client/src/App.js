@@ -1,11 +1,11 @@
 import NavBar from "./components/navbar/NavBar";
 import Home from "./pages/home/Home";
 import Register from "./pages/register/Register";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Login from "./pages/login/Login";
 import Create from "./pages/create/Create";
 import Settings from "./pages/settings/Settings";
 import SinglePost from "./pages/singlePost/SinglePost";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useContext } from "react";
 import { Context } from "./context/Context";
 
@@ -14,7 +14,8 @@ function App() {
   return (
     <Router>
       <NavBar />
-      <Switch>78
+      <Switch>
+        78
         <Route exact path="/">
           <Home />
         </Route>

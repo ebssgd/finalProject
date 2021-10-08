@@ -59,3 +59,9 @@
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
 }
+
+.postAuthor {
+  color: #2e67f8;
+  font-size: 14px;
+  margin-top: 10px;
+}

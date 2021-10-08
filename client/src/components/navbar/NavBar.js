@@ -5,6 +5,7 @@ import { Context } from "../../context/Context";
 
 function NavBar() {
   const { user, dispatch } = useContext(Context);
+  const PF = "http://localhost:5000/images/";
 
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });
@@ -50,21 +51,34 @@ function NavBar() {
               Home
             </Link>
           </li>
-          {/* <li className="topListItem">
-            <Link className="link" to="/">
-              About Us 
-            </Link>
-          </li>
-          <li className="topListItem">
-            <Link className="link" to="/">
-              Contact
-            </Link>
-          </li> */}
-          <li className="topListItem">
-            <Link className="link" to="/create">
-              Create Blog
-            </Link>
-          </li>
+          {!user && (
+            <>
+              <li className="topListItem">
+                <Link className="link" to="/login">
+                  Login
+                </Link>
+              </li>
+              <li className="topListItem">
+                <Link className="link" to="/register">
+                  Register
+                </Link>
+              </li>
+            </>
+          )}
+          {user && (
+            <li className="topListItem">
+              <Link className="link" to="/create">
+                Create Blog
+              </Link>
+            </li>
+          )}
+          {user && (
+            <li className="topListItem">
+              <Link className="link" to="/settings">
+                Settings
+              </Link>
+            </li>
+          )}
           <li className="topListItem" onClick={handleLogout}>
             {user && "Logout"}
           </li>
@@ -73,24 +87,12 @@ function NavBar() {
       <div className="topRight">
         {user ? (
           <Link to="/settings">
-            <img className="topImage" src={user.profilePic} alt=""></img>
+            <img className="topImage" src={PF + user.profilePic} alt=""></img>
+            <span className="welcome">Hi, {user.username}</span>
           </Link>
         ) : (
-          <ul className="topList">
-            <li className="topListItem">
-              <Link className="link" to="/login">
-                Login
-              </Link>
-            </li>
-            <li className="topListItem">
-              <Link className="link" to="/register">
-                Register
-              </Link>
-            </li>
-          </ul>
+          <ul className="topList"></ul>
         )}
-
-        <i className="topSearchIcon fas fa-search"></i>
       </div>
     </div>
   );

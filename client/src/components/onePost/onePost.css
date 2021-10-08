@@ -25,13 +25,13 @@
 .onePostTitle {
   text-align: center;
   margin: 10px;
-  font-family: "Lora", serif;
+  font-family: "RedFive", serif;
   font-size: 28px;
 }
 
 .onePostTitleUpdate {
   margin: 10px;
-  font-family: "Lora", serif;
+  font-family: "RedFive", serif;
   font-size: 28px;
   text-align: center;
 }
@@ -63,7 +63,7 @@
   display: flex;
   justify-content: space-between;
   font-size: 16px;
-  font-family: "Varela Round" sans-serif;
+  font-family: "Episode 1" sans-serif;
   color: #2e67f8;
 }
 
