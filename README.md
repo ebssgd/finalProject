@@ -19,5 +19,5 @@ The front end simply uses React and React-router-dom to accomplish the goals of 
 ### End Result
 
 1. Recieve my Full Stack Developer certification.
-2. Add a couple more cool projects on guthub. 
+2. Add a couple more cool projects on github. 
 3. Embark on an amazing new career
